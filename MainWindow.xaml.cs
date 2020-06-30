@@ -31,6 +31,7 @@ namespace Phonebook
                     break;
 
                 case Action.Delete:
+                    personesList.Items.Remove(personesList.SelectedItem);
                     break;
             }
         }

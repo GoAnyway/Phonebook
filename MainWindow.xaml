@@ -16,8 +16,8 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="addButton" Width="60" Height="30" Content="Add" Click="ActionsButton_Click" Margin="10,244,530,10" />
-        <Button x:Name="editButton" Width="60" Height="30" Content="Edit" Click="ActionsButton_Click" Margin="240,244,300,10"/>
-        <Button x:Name="deleteButton" Width="60" Height="30" Content="Delete" Click="ActionsButton_Click" Margin="442,244,98,10"/>
+        <Button x:Name="addButton" Width="60" Height="30" Content="Add" Click="ActionsButton_Click" Margin="10,244,530,10"/>
+        <Button x:Name="editButton" Width="60" Height="30" Content="Edit" Click="ActionsButton_Click" Margin="75,244,465,10"/>
+        <Button x:Name="deleteButton" Width="60" Height="30" Content="Delete" Click="ActionsButton_Click" Margin="140,244,400,10"/>
     </Grid>
 </Window>
