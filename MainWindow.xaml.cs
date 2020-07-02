@@ -1,5 +1,5 @@
-﻿using System.Windows;
-using System.Windows.Controls;
+﻿using Phonebook.Models;
+using System.Windows;
 
 namespace Phonebook
 {
@@ -12,26 +12,7 @@ namespace Phonebook
         public MainWindow()
         {
             InitializeComponent();
-            personesData.ItemsSource = MainViewModel.Persons;
-
-            addButton.Tag = Action.Add;
-            deleteButton.Tag = Action.Delete;
-        }
-
-        private void ActionsButton_Click(object sender, RoutedEventArgs e)
-        {
-            Action action = (Action)((Button)sender).Tag;
-
-            switch (action)
-            {
-                case Action.Add: 
-                    MainViewModel.AddPerson();
-                    break;
-
-                case Action.Delete:
-                    MainViewModel.Persons.Remove((PersonViewModel)personesData.SelectedItem);
-                    break;
-            }
+            DataContext = MainViewModel;
         }
     }
 }
