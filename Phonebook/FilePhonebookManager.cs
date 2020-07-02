@@ -7,7 +7,7 @@ namespace Phonebook
 {
     public class FilePhonebookManager : IPhonebookManager
     {
-        private readonly string _filename;
+        private readonly string _filename = "Persons.txt";
 
         public FilePhonebookManager(string filename)
         {
