@@ -8,12 +8,13 @@ namespace Phonebook
     /// </summary>
     public partial class MainWindow : Window
     {
+        private MainViewModel MainViewModel { get; set; } = new MainViewModel();
         public MainWindow()
         {
             InitializeComponent();
+            personesData.ItemsSource = MainViewModel.Persons;
 
             addButton.Tag = Action.Add;
-            editButton.Tag = Action.Edit;
             deleteButton.Tag = Action.Delete;
         }
 
@@ -23,15 +24,12 @@ namespace Phonebook
 
             switch (action)
             {
-                case Action.Add:
-                    personesList.Items.Add(new Person { Name = "555", Surname = "666", Nickname = "rad", PhoneNumber = "900001" });
-                    break;
-
-                case Action.Edit:
+                case Action.Add: 
+                    MainViewModel.AddPerson();
                     break;
 
                 case Action.Delete:
-                    personesList.Items.Remove(personesList.SelectedItem);
+                    MainViewModel.Persons.Remove((PersonViewModel)personesData.SelectedItem);
                     break;
             }
         }
