@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\woolf\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\woolf\\.nuget\\packages"
+    ]
+  }
+}
