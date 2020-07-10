@@ -19,6 +19,7 @@ namespace Phonebook.Models
 
         public ICommand AddCommand { get; set; }
         public ICommand DeleteCommand { get; set; }
+        public ICommand SaveCommand { get; set; }
 
         public MainViewModel(IPhonebookManager loader)
         {
@@ -32,6 +33,7 @@ namespace Phonebook.Models
 
             AddCommand = new AddCommand(this);
             DeleteCommand = new DeleteCommand(this);
+            SaveCommand = new AddCommand(this);
         }
     }
 }
