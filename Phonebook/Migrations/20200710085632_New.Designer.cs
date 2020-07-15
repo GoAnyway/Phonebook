@@ -3,12 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Phonebook;
+using Phonebook.Context;
 
 namespace Phonebook.Migrations
 {
-    [DbContext(typeof(AppContext))]
+    [DbContext(typeof(PersonContext))]
     [Migration("20200710085632_New")]
     partial class New
     {

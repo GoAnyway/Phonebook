@@ -17,11 +17,11 @@ namespace Phonebook.Commands
         }
         public void Execute(object parameter)
         {
-            _model.Persons.Add(new PersonViewModel
-            {
-                Name = ""
-            });
+            _model.Persons.Add(new PersonViewModel { });
         }
+
+#pragma warning disable CS0067
         public event EventHandler CanExecuteChanged;
+#pragma warning restore CS0067
     }
 }

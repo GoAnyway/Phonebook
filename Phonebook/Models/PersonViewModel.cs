@@ -5,6 +5,13 @@ namespace Phonebook.Models
 {
     public class PersonViewModel : INotifyPropertyChanged
     {
+       private int id;
+       public int Id
+       {
+           get => id;
+           set { id = value; NotifyPropertyChanged(); }
+       }
+
         private string name;
         public string Name 
         {
@@ -32,8 +39,6 @@ namespace Phonebook.Models
             get => phoneNumber;
             set { phoneNumber = value; NotifyPropertyChanged(); }
         }
-
-        public PersonViewModel() { }
 
         private void NotifyPropertyChanged([CallerMemberName] string propertyName = null)
         {

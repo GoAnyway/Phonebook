@@ -1,10 +1,11 @@
 ﻿using Phonebook.Commands;
+using Phonebook.DbManager;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 
 namespace Phonebook.Models
 {
-    public class MainViewModel
+    public class MainViewModel 
     {       
         private PersonViewModel _selectedPerson;
         public PersonViewModel SelectedPerson
@@ -33,7 +34,7 @@ namespace Phonebook.Models
 
             AddCommand = new AddCommand(this);
             DeleteCommand = new DeleteCommand(this);
-            SaveCommand = new AddCommand(this);
+            SaveCommand = new SaveCommand(this, new DbPhonebookManager());
         }
     }
 }

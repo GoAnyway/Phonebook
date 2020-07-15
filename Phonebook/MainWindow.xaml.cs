@@ -1,11 +1,12 @@
-﻿using Phonebook.Models;
+﻿using Phonebook.DbManager;
+using Phonebook.Models;
 using System.Windows;
 
 namespace Phonebook
 {
     public partial class MainWindow : Window
     {
-        private MainViewModel MainViewModel = new MainViewModel(new FilePhonebookManager());
+        private readonly MainViewModel MainViewModel = new MainViewModel(new DbPhonebookManager());
         public MainWindow()
         {
             InitializeComponent();
